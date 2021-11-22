@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+#headerWrap {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+#reviewPageWrap {
+    margin: 100px auto 0px auto;
+    width: 1194px;
+}
+
+#pageTit {
+    margin-bottom: 100px;
+    font-size: 24px;
+}
+
+#reviewBox {
+    margin-right: 50px;
+    width: 364px;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    position: relative;
+}
+
+#reviewBoxInner {
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#reviewerDateWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+#reviewer {
+    font-size: 18px;
+}
+
+#reviewDate {
+    font-size: 12px;
+    color: #c4c4c4;
+}
+
+#review {
+    font-size: 14px;
+    color: #757575;
+}
+
+#targetScopeWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+#scopeWrap {
+    display: flex;
+}
+
+#reviewTarget {
+    font-size: 12px;
+    color: #C4C4C4;
+}
+
+#scope {
+    margin-left: 6px;
+    font-size: 12px;
+}
+
+#reviewerTargetWrap {
+    display: flex;
+}
+
+#reviewBoxWrap {
+    display: flex;
+    width: 1460px;
+    flex-wrap: wrap;
+}

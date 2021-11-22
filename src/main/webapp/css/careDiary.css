@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+#headerWrap {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+#careDiaryPageWrap {
+    margin: 100px auto 0px auto;
+    width: 1194px;
+}
+
+#pageTit {
+    margin-bottom: 100px;
+    font-size: 24px;
+}
+
+#careDiaryInner {
+    margin-bottom: 80px;
+    width: 1194px;
+    border: 1px solid #EAEAEA;
+    background: #FDFDFD;
+    border-radius: 5px;
+}
+
+#careDiaryPetName {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    width: 1174px;
+    height: 40px;
+    font-size: 18px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+#careDiaryContent {
+    margin: 0 auto;
+    width: 736px;
+}
+
+#fullDateWrap {
+    display: flex;
+    justify-content: center;
+    width: 730px;
+}
+
+#fullDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 500px;
+    height: 40px;
+    border: 1px solid #7AAFFF;
+    color: #7AAFFF;
+    border-radius: 50px;
+}
+
+#careDiaryCardWrap {
+    width: 736px;
+}
+
+#careDiaryCard {
+    margin-top: 100px;
+    width: 736px;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+}
+
+#careDiaryPetSitterName {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    width: 716px;
+    height: 40px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+#diaryContentWrap {
+    padding: 20px;
+    width: 1134px;
+}
+
+#diaryTit {
+    font-size: 18px;
+}
+
+#diaryContent {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #535353;
+}
+
+#diaryServiceInfo {
+    margin-top: 60px;
+    font-size: 12px;
+    color: #7AAFFF;
+}
+
+#diaryDateWarp {
+    margin: 20px 0px 40px 0px;
+    width: 736px;
+}
+
+#diaryDate {
+    display: flex;
+    justify-content: flex-end;
+}

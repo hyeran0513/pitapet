@@ -1,0 +1,595 @@
+@charset "UTF-8";
+
+#headerWrap {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+#detailViewWrap {
+    margin: 100px auto 0px auto;
+    width: 1194px;
+}
+
+#reviewBox {
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 364px;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    position: relative;
+}
+
+#reviewBoxInner {
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#reviewerDateWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+#reviewer {
+    font-size: 18px;
+}
+
+#reviewDate {
+    font-size: 12px;
+    color: #c4c4c4;
+}
+
+#review {
+    font-size: 14px;
+    color: #757575;
+}
+
+#targetScopeWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+#scopeWrap {
+    display: flex;
+}
+
+#reviewTarget {
+    font-size: 12px;
+    color: #C4C4C4;
+}
+
+#scope {
+    margin-left: 6px;
+    font-size: 12px;
+}
+
+#targetLocation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 70px;
+    height: 24px;
+    background-color: #757575;
+    color: white;
+    border-radius: 10px 0px 10px 0px;
+    font-size: 12px;
+    position: absolute;
+    top:2.8%;
+    left:9%;
+    transform: translate(-50%, -50%);
+}
+
+#reviewerTargetWrap {
+    display: flex;
+}
+
+#reviewBoxWrap {
+    display: flex;
+    width: 1460px;
+    flex-wrap: wrap;
+}
+
+#reviewMoreBtn {
+    margin: 60px 0px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 200px;
+    color:#7AAFFF;
+    cursor: pointer;
+}
+
+#recommendTit {
+    margin: 160px 0px -20px 0px;
+    font-size: 24px;
+}
+
+#titSearchWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 1194px;
+}
+
+#searchSelectWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+#pageTit {
+    margin: 100px 0px;
+    font-size: 24px;
+}
+
+#choiceBox {
+    padding-left: 10px;
+    width: 130px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid #EAEAEA;
+    cursor: pointer;
+}
+
+#choiceBox:focus {
+    outline: none;
+}
+
+#searchWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid #EAEAEA;
+}
+
+#searchText {
+    margin-left: 20px;
+    border: none;
+}
+
+#searchText:focus {
+    outline: none;
+}
+
+#searchImg {
+    margin-right: 20px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+#petSitterInfoBox {
+    position: relative;
+    display: flex;
+    margin-bottom: 60px;
+    padding: 20px;
+    width: 1154px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    border-radius: 10px;
+}
+
+#petSitterLocation {
+    position: absolute;
+    top: 11.6%;
+    left: 4.8%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 70px;
+    height: 24px;
+    background-color: #757575;
+    color: white;
+    border-radius: 5px 0px 5px 0px;
+    font-size: 12px;
+}
+
+#petSitterInfoInner {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 800px;
+    height: 242px;
+}
+
+#likeCountWrap {
+    position: absolute;
+    top: 86%;
+    left: 28.6%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14px;
+}
+
+#likeCount {
+    padding-left: 4px;
+    font-size: 12px;
+}
+
+#petSitterNameLikeWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 780px;
+    height: 20px;
+}
+
+#petSitterName {
+    font-size: 18px;
+}
+
+#petSitterIntro {
+    font-size: 14px;
+}
+
+#petSitterService {
+    font-size: 14px;
+    color: #535353;
+}
+
+#caringDateWrap {
+    display: flex;
+    justify-content: space-between;
+    width: 780px;
+}
+
+#caringPetsWrap {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+#caringPet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    width: 70px;
+    height: 24px;
+    color: #E3C1A2;
+    border: 1px solid #E3C1A2;
+    border-radius: 50px;
+}
+
+#serviceCaringWrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+#petSitterServiceWrap {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#petSitterService {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #E3C1A2;
+}
+
+#serviceTit {
+    font-size: 14px;
+}
+
+#caringTit {
+    font-size: 14px;
+    color: #535353;
+}
+
+#scopeWrap {
+    display: flex;
+}
+
+#scope {
+    margin-left: 6px;
+    font-size: 12px;
+}
+
+#reviewTitWrap {
+    display: flex;
+    align-items: center;
+    margin: 180px 0px 80px 0px;
+}
+
+#reviewTit {
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+#serviceCaringWrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+#petSitterServiceWrap {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#petSitterService {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #E3C1A2;
+}
+
+#serviceTit {
+    font-size: 14px;
+}
+
+#caringTit {
+    font-size: 14px;
+    color: #535353;
+}
+
+#reservationBtn {
+    margin-top: 60px;
+    width: 480px;
+    height: 40px;
+    background-color: #7AAFFF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#reservationBtn:focus {
+    outline: none;
+}
+
+#detailWrap {
+    display: flex;
+}
+
+#detailBox {
+    position: relative;
+    margin-right: 50px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    width: 654px;
+}
+
+#detailPetSitterName {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 40px;
+    font-size: 18px;
+}
+
+#detailInner {
+    padding: 20px;
+}
+
+#detailTit {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#detailIntro {
+    margin-bottom: 50px;
+    font-size: 14px;
+    color: #535353;
+}
+
+#lookUpDate {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #C4C4C4;
+}
+
+#targetLocation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 70px;
+    height: 24px;
+    background-color: #757575;
+    color: white;
+    border-radius: 0px 0px 5px 0px;
+    font-size: 12px;
+    position: absolute;
+    top: 8.2%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+#likeCountWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 70px;
+    height: 24px;
+    border-radius: 0px 0px 5px 0px;
+    font-size: 12px;
+    position: absolute;
+    top: 58%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+a { color:#000000;text-decoration:none; }
+.scriptCalendar { text-align:center; }
+.scriptCalendar > thead > tr > td { width:60px;height:40px; }
+.scriptCalendar > thead > tr:first-child > td { font-weight:bold; }
+.scriptCalendar > thead > tr:last-child > td { 
+    background-color:#F7F7F7;
+    border-top: 2px solid #7AAFFF;
+    border-left: 1px solid #EAEAEA; 
+    border-right: 1px solid #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;  
+}
+
+.scriptCalendar > tbody > tr > td { width:60px;height:40px; 
+    border: 1px solid #EAEAEA;  
+}
+
+#ableTimeTit {
+    margin-bottom: -10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.scriptCalendar {
+    margin: 0 auto;
+}
+
+#calYearMonth {
+    font-size: 14px;
+    color: #C1C1C1;
+}
+
+#detailReviewTit {
+margin-top: 180px;
+font-size: 24px;
+}
+
+#reviewText {
+    margin-top: 80px;
+    padding: 20px;
+    width: 1154px;
+    height: 160px;
+    font-size: 14px;
+    resize: none;
+    border: 1px solid #C4C4C4;
+}
+
+#fileReviewBtnWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;;
+    width: 1194px;
+    height: 40px;
+}
+
+#detailReviewBtn {
+    width: 100px;
+    height: 40px;
+    background: #7AAFFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#detailReviewBtn:focus {
+    outline: none;
+}
+
+#fileBtn {
+    border: none;
+    background: none;
+    font-size: 14px;
+}
+
+#fileWrap {
+    display: flex;
+    align-items: center;
+}
+
+#fileImg {
+    margin-right: 10px;
+}
+
+#ableTimeTit {
+ 	margin-bottom: 20px;
+}
+  	
+#ableTimeWrap {
+    padding: 20px 0px;
+    width: 480px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+}
+
+#askPeriodTit {
+    margin: 40px 0px 20px 0px;
+    font-size: 14px;
+}
+
+/*datepicker에서 사용한 이미지 버튼 style적용*/
+img.ui-datepicker-trigger {
+    margin-left:5px; vertical-align:middle; cursor:pointer;
+}
+
+#fromDate,
+#toDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+input::-webkit-input-placeholder {
+    color: black;
+    font-size: 14px;
+}
+
+input:-ms-input-placeholder {
+    color: black;
+    font-size: 14px;
+}
+
+#pickPeriodWrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    height: 70px;
+    border-radius: 10px;
+    border: 1px solid #C4C4C4;
+}
+
+#calendarImg {
+    position: absolute;
+    top: 34%;
+    left: 8%;
+    transform: (50%, 50%);
+}
+
+#pickPeriodInner {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+
+#carePriceKind {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #7AAFFF;
+}
+
+#carePrice {
+    float: right;
+    margin-top: 20px;
+    font-size: 18px;
+    color: red;
+}

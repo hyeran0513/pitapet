@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#joinBg {
+    background-color: #F5F6F7;
+}
+
+#joinWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+#joinTit {
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-family: 'Righteous', cursive;
+    color: #89A0F2;
+}
+
+#idPwdWrap,
+#privacyWrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 1px solid #DCDCDC;
+}
+
+#joinId,
+#joinPwd,
+#joinCheckPwd,
+#joinName,
+#joinBirth,
+#joinAddress,
+#joinPhoneNumber,
+#joinEmail {
+    padding-left: 20px;
+    width: 420px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #F2F2F2;
+}
+
+#joinId:focus,
+#joinPwd:focus,
+#joinCheckPwd:focus,
+#joinName:focus,
+#joinBirth:focus,
+#joinAddress:focus,
+#joinPhoneNumber:focus,
+#joinEmail:focus {
+    outline-color: #89A0F2;
+}
+
+#genderWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    height: 50px;
+    background-color: white;
+}
+
+#genderInner {
+    display: flex;
+    width: 400px;
+    background-color: white;
+}
+
+.gender {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    color: #999999;
+    cursor: pointer;
+}
+
+#joinMan:hover,
+#joinWoman:hover,
+.clicked {
+    background-color: #89A0F2;
+    color: white;
+}
+
+#joinBtn {
+    margin-top: 30px;
+    width: 440px;
+    height: 50px;
+    color: white;
+    background-color: #89A0F2;
+    border: none;
+    cursor: pointer;
+}
+
+#logo {
+    z-index: 1;
+   	margin-left: 14px;
+}

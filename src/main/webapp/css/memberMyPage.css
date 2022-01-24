@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#memberBtn {
+    width: 80px;
+    height: 26px;
+    border: none;
+    background-color: white;
+    border-radius: 50px 0px 0px 50px;
+    cursor: pointer;
+}
+
+#sitterBtn {
+    width: 80px;
+    height: 26px;
+    border: none;
+    border-radius: 0px 50px 50px 0px;
+    cursor: pointer;
+}
+
+#profileImg {
+	width: 316px;
+	height: 200px;
+}
+
+#logo {
+    z-index: 1;
+   	margin-left: 14px;
+}
+
+#rezCompleteBtn {
+	width: 80px;
+	height: 24px;
+	border: none;
+	color: #D8B571;
+	border-radius: 50px;
+	background-color: white;
+	cursor: pointer;
+}
+
+#rezProceedingBtn {
+	width: 80px;
+	height: 24px;
+	border: none;
+	color: #9FBB50;
+	border-radius: 50px;
+	background-color: white;
+	cursor: pointer;
+}
+
+#careCompleteBtn {
+	width: 80px;
+	height: 24px;
+	border: none;
+	color: #9889F2;
+	border-radius: 50px;
+	background-color: white;
+	cursor: pointer;
+}

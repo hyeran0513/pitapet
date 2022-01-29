@@ -4,3 +4,9 @@
 <br/><br/> **🎞 Preview** <br/>
 
 ![pitapet](https://user-images.githubusercontent.com/69576326/142875001-d3b81d02-9939-4686-a52c-1b0192ba02d3.gif)
+
+<br/><br/> **🛠Role** <br/>
+
+윤라경|이유리|구세현|김혜란
+---|---|---|---|
+BE|BE|BE|FE / UI|

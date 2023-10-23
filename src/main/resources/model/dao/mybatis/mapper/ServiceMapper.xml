@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="model.dao.mybatis.mapper.ServiceMapper">
+
+	<!-- 전체 서비스 목록 조회 -->
+	<select id="findAllServiceKinds" resultType="Service">
+		SELECT service_id AS id, title, content
+		FROM service
+	</select>
+	
+	<!-- 특정 돌보미의 제공 서비스 리스트 검색 -->
+	<select id="findProvideServicesBySitter" parameterType="String" resultType="Service">
+		SELECT service_id AS id, title, content
+		FROM provide_service JOIN service USING (service_id)
+		WHERE sitter_id = #{id}
+    </select>
+    
+    <!-- 예약 내여겍에 대한 제공 서비스 리스트 조회 -->
+    <resultMap id="serviceByCareMap" type="CareDetails">
+		<id column="rcv_id" jdbcType="VARCHAR" property="id" javaType="String" />
+		<association property="careInfo" column="care_id" javaType="Care">
+			<id column="care_id" jdbcType="VARCHAR" property="id" javaType="int" />
+		</association>
+		<association property="serviceInfo" column="service_id" javaType="Service">
+			<id column="service_id" jdbcType="VARCHAR" property="id" javaType="String" />
+			<result column="service_name" jdbcType="VARCHAR" property="title" javaType="String" />
+		</association>
+		<association property="carePet" column="pet_id" javaType="Pet">
+			<id column="pet_id" jdbcType="VARCHAR" property="id" javaType="String" />
+			<result column="pet_name" jdbcType="VARCHAR" property="name" javaType="String" />
+		</association>
+	</resultMap>
+    
+    <select id ="findReceiveServicesByCare" parameterType="int" resultMap="serviceByCareMap">
+    	SELECT rs.rcv_id, rs.care_id, rs.service_id, rs.pet_id,
+    		s.title AS service_name,
+    		p.name AS pet_name
+		FROM receive_service rs
+			LEFT OUTER JOIN care c ON rs.care_id = c.care_id
+    		LEFT OUTER JOIN service s ON rs.service_id = s.service_id
+    		LEFT OUTER JOIN pet p ON rs.pet_id = p.pet_id
+		WHERE c.care_id = #{careId}
+		ORDER BY rs.pet_id, rs.service_id
+    </select>
+    
+    <!-- 특정 반려동물이 받을 서비스 개수 반환 -->
+    <select id="countReceiveServiceByPetId" parameterType="String" resultType="int">
+    	SELECT COUNT(*) 
+    	FROM receive_service 
+    	WHERE pet_id = #{pet_id}
+    </select>
+    
+    <!-- 돌봄일지 체크리스트에서 미체크한 제공서비스 조회 -->
+    <resultMap id="serviceByNMap" type="CareDetails">
+		<id column="rcv_id" jdbcType="VARCHAR" property="id" javaType="String" />
+		<association property="careInfo" column="care_id" javaType="Care">
+			<id column="care_id" jdbcType="VARCHAR" property="id" javaType="int" />
+		</association>
+	</resultMap>
+    
+    <select id="findNReceiveServices" parameterType="java.util.Map" resultMap="serviceByNMap">
+    	SELECT rcv_id, care_id
+    	FROM receive_service
+    	WHERE care_id = #{careId}
+            <if test="careDetailsList.size != 0">
+                AND rcv_id NOT IN
+                <foreach collection="careDetailsList" item="item" index="index"  open="(" separator="," close=")">
+                    #{item.id}
+                </foreach>
+            </if>
+    </select>
+    
+    <!-- 돌봄 예약 정보(돌봄 내역) 추가 -->
+    <insert id="createReceiveServices" parameterType="java.util.List">
+	    <foreach collection="list" item="item" index="index"  open="INSERT ALL " separator=" " close="SELECT * FROM DUAL" >
+	    	INTO RECEIVE_SERVICE (rcv_id, care_id, pet_id, service_id)
+	    	VALUES (#{item.id}, #{item.careInfo.id}, #{item.carePet.id}, #{item.serviceInfo.id})	
+		</foreach>
+    </insert>
+    
+    <!-- 예약내역을 참조하는 제공 서비스 삭제 -->
+    <delete id="deleteReceiveService" parameterType="int">
+		DELETE FROM receive_service
+		WHERE care_id = #{id}
+	</delete>
+    
+    <!-- 해당 돌보미의 제공 가능한 서비스 추가 -->
+    <insert id="addProvideService" parameterType="hashMap">
+    	<foreach collection="list" item="map" index="index"  open="INSERT ALL " separator=" " close="SELECT * FROM DUAL" >
+	    	INTO PROVIDE_SERVICE (service_id, sitter_id)
+	    	VALUES (#{map.service}, #{map.sitterId})	
+		</foreach>
+	</insert>
+	
+	<!-- 해당 돌봄 예약의 제공 받을 서비스 체크리스트 생성 -->
+	<insert id="createCareCheckList" parameterType="java.util.List">
+	    <foreach collection="list" item="item" index="index"  open="INSERT ALL " separator=" " close="SELECT * FROM DUAL" >
+	    	INTO care_checklist (record_id, rcv_id, care_check)
+	    	VALUES (#{item.recordId}, #{item.id}, #{item.check})	
+		</foreach>
+    </insert>
+</mapper>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="model.dao.mybatis.mapper.CareMapper">
+	<!-- 보호자 및 특정 돌보미의 돌봄 스케줄 조회 -->
+	<resultMap id="scheResultMap" type="Care">
+		<id column="care_id" jdbcType="INTEGER" property="id" javaType="int" />
+		<result column="start_date" jdbcType="DATE" property="startDate" javaType="string" />
+		<result column="end_date" jdbcType="DATE" property="endDate" javaType="string" />
+		<result column="care_status" jdbcType="VARCHAR" property="status"  javaType="string" />
+		<association property="companion" column="member_id" javaType="Member">
+			<id column="member_id" jdbcType="VARCHAR" property="id" javaType="string" />
+		</association>
+		<association property="sitter" column="sitter_id" javaType="PetSitter">
+			<association property="sitter" column="member_id" javaType="Member">
+				<id column="sitter_id" jdbcType="VARCHAR" property="id" javaType="string" />
+				<result column="name" jdbcType="VARCHAR" property="name" javaType="string" />
+			</association>
+		</association>
+	</resultMap>
+	
+	<select id="findCareSchedules" parameterType="String" resultMap="scheResultMap"> 
+		SELECT DISTINCT care_id, start_date, end_date, c.member_id, m.name, c.sitter_id, care_status
+        FROM care c JOIN member m ON c.sitter_id = m.member_id      
+        <where>
+			<if test="sitterId == null and memberId != null">
+				c.member_id = #{memberId}
+			</if>
+			<if test="sitterId != null and memberId != null">
+				c.member_id = #{memberId} OR c.sitter_id = #{memberId}
+			</if>
+			<if test="memberId == null and sitterId != null">
+				c.sitter_id = #{sitterId}
+			</if>
+		</where>			     
+	</select>
+	
+	<!-- 특정 돌보미의 돌봄 스케줄 조회 -->
+	<resultMap id="sitterScheResultMap" type="Care">
+		<id column="care_id" jdbcType="INTEGER" property="id" javaType="int" />
+		<result column="start_date" jdbcType="DATE" property="startDate" javaType="string" />
+		<result column="end_date" jdbcType="DATE" property="endDate" javaType="string" />
+		<result column="care_status" jdbcType="VARCHAR" property="status"  javaType="string" />
+		<association property="companion" column="member_id" javaType="Member">
+			<id column="member_id" jdbcType="VARCHAR" property="id" javaType="string" />
+			<result column="name" jdbcType="VARCHAR" property="name" javaType="string" />
+		</association>
+		<association property="sitter" column="sitter_id" javaType="PetSitter">
+			<association property="sitter" column="member_id" javaType="Member">
+				<id column="sitter_id" jdbcType="VARCHAR" property="id" javaType="string" />
+			</association>
+		</association>
+	</resultMap>
+	
+	<select id="findSitterCareSchedules" parameterType="String" resultMap="sitterScheResultMap"> 
+		SELECT DISTINCT care_id, start_date, end_date, c.member_id, m.name, c.sitter_id, care_status
+        FROM care c JOIN member m ON c.member_id = m.member_id      
+        <where>
+			<if test="memberId == null and sitterId != null">
+				c.sitter_id = #{sitterId}
+			</if>
+		</where>			     
+	</select>
+	
+	<!-- 돌봄 예약내역 조회 -->
+	<resultMap id="careResultMap" type="Care">
+		<id column="care_id" jdbcType="INTEGER" property="id" javaType="int" />
+		<result column="start_date" jdbcType="DATE" property="startDate" javaType="string" />
+		<result column="end_date" jdbcType="DATE" property="endDate" javaType="string" />
+		<result column="total_price" jdbcType="INTEGER" property="totalPrice" javaType="int" />
+		<result column="notes" jdbcType="VARCHAR" property="notes" javaType="string" />
+		<result column="care_status" jdbcType="VARCHAR" property="status" javaType="string" />
+		<association property="companion" column="member_id" javaType="Member">
+			<id column="member_id" jdbcType="VARCHAR" property="id" javaType="string" />
+			<result column="mem_name" jdbcType="VARCHAR" property="name" javaType="string" />
+			<result column="mem_email" jdbcType="VARCHAR" property="email" javaType="string" />
+			<result column="mem_phone" jdbcType="VARCHAR" property="phone" javaType="string" />
+			<result column="mem_address" jdbcType="VARCHAR" property="address" javaType="string" />
+		</association>
+		<association property="sitter" column="sitter_id" javaType="PetSitter">
+			<association property="sitter" column="member_id" javaType="Member">
+				<id column="sitter_id" jdbcType="VARCHAR" property="id" javaType="string" />
+				<result column="sit_name" jdbcType="VARCHAR" property="name" javaType="string" />
+				<result column="sit_email" jdbcType="VARCHAR" property="email" javaType="string" />
+				<result column="sit_phone" jdbcType="VARCHAR" property="phone" javaType="string" />
+				<result column="sit_address" jdbcType="VARCHAR" property="address" javaType="string" />
+			</association>
+		</association>
+		<collection property="careList" ofType="CareDetails">
+			<id column="rcv_id" jdbcType="VARCHAR" property="id" javaType="String" />
+			<association property="serviceInfo" column="service_id" javaType="Service">
+				<id column="service_id" jdbcType="VARCHAR" property="id" javaType="String" />
+				<result column="service_name" jdbcType="VARCHAR" property="title" javaType="String" />
+			</association>
+			<association property="carePet" column="pet_id" javaType="Pet">
+				<id column="pet_id" jdbcType="VARCHAR" property="id" javaType="String" />
+				<result column="pet_name" jdbcType="VARCHAR" property="name" javaType="String" />
+			</association>
+		</collection>
+	</resultMap>
+	
+	<select id="findReservation" parameterType="int" resultMap="careResultMap"> 
+		SELECT c.care_id, c.start_date, c.end_date, c.member_id, c.sitter_id,
+            c.total_price, c.notes, c.care_status,
+            m.name AS mem_name, m.email AS mem_email, m.phone AS mem_phone, m.address AS mem_address,
+            sm.name AS sit_name, sm.email AS sit_email, sm.phone AS sit_phone, sm.address AS sit_address, 
+    		rs.rcv_id,
+    		s.service_id, s.title AS service_name, 
+    		p.pet_id, p.name AS pet_name
+		FROM care c
+    		FULL OUTER JOIN member m ON c.member_id = m.member_id
+    		FULL OUTER JOIN member sm ON c.sitter_id = sm.member_id
+    		FULL OUTER JOIN receive_service rs ON c.care_id = rs.care_id
+    		FULL OUTER JOIN service s ON rs.service_id = s.service_id
+    		FULL OUTER JOIN pet p ON rs.pet_id = p.pet_id
+		WHERE c.care_id = #{careId}     			     
+	</select>
+	
+	<!-- 보호자-돌보미 간 돌봄 완료 내역 반환 -->
+	<resultMap id="clResultMap" type="Care">
+		<id column="care_id" jdbcType="INTEGER" property="id" javaType="int" />
+		<result column="start_date" jdbcType="DATE" property="startDate" javaType="string" />
+		<result column="end_date" jdbcType="DATE" property="endDate" javaType="string" />
+		<result column="care_status" jdbcType="VARCHAR" property="status" javaType="string" />
+		<association property="companion" column="member_id" javaType="Member">
+			<id column="member_id" jdbcType="VARCHAR" property="id" javaType="string" />
+		</association>
+		<association property="sitter" column="sitter_id" javaType="PetSitter">
+			<association property="sitter" column="member_id" javaType="Member">
+				<id column="sitter_id" jdbcType="VARCHAR" property="id" javaType="string" />
+			</association>
+		</association>
+	</resultMap>
+	
+	<select id="findCareList" parameterType="String" resultMap="clResultMap"> 
+		SELECT care_id, start_date, end_date, member_id, care_status
+	    FROM care
+	    WHERE member_id = #{memberId} AND sitter_id = #{sitterId} AND care_status = 'Z'      		     
+	</select>
+
+	<!-- 돌봄 내역 추가 -->
+	<insert id="createCare" parameterType="Care">
+		<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			SELECT care_seq.nextval AS id FROM DUAL
+		</selectKey>		
+		INSERT INTO care (care_id, sitter_id, member_id, start_date, end_date, total_price, notes, care_status)
+		VALUES (#{id}, #{sitter.sitter.id}, #{companion.id},  #{startDate}, 
+			 TO_DATE(#{endDate}, 'yyyy/MM/dd HH24:mi:ss'), #{totalPrice}, #{notes}, #{status})
+	</insert>
+	
+	<!-- 돌봄 내역 삭제 -->
+	<delete id="deleteCare" parameterType="int">
+		DELETE FROM Care
+		WHERE care_id = #{careId}
+	</delete>
+	
+	<!-- check 정보 반환 -->
+	<select id="getCheckInfo" parameterType="String"> 
+		SELECT care_check	        
+        FROM care_checklist         			
+		WHERE rcv_id = #{rcvId}	
+    </select>
+    
+    <!-- 돌봄일지 리스트 조회 -->
+    <resultMap id="careRecordMap" type="Care">
+    	<id column="care_id" jdbcType="NUMERIC" property="id" javaType="int" />
+		<result column="start_date" jdbcType="DATE" property="startDate" javaType="String" />
+		<result column="end_date" jdbcType="DATE" property="endDate" javaType="String" />
+		<association property="companion" column="member_id" javaType="Member">
+			<id column="member_id" jdbcType="VARCHAR" property="id" javaType="String" />
+			<result column="member_name" jdbcType="VARCHAR" property="name" javaType="String" />
+		</association>
+		<association property="sitter" column="sitter_id" javaType="PetSitter">
+			<association property="sitter" column="member_id" javaType="Member">
+				<id column="sitter_id" jdbcType="VARCHAR" property="id" javaType="String" />
+				<result column="sitter_name" jdbcType="VARCHAR" property="name" javaType="String" />
+			</association>
+		</association>
+		<collection property="careRecordList" ofType="CareRecord">
+			<id column="record_id" jdbcType="NUMERIC" property="id" javaType="int" />
+			<result column="write_date" jdbcType="DATE" property="writeDate" javaType="String" />
+			<result column="title" jdbcType="VARCHAR" property="title" javaType="String" />
+			<result column="content" jdbcType="VARCHAR" property="content" javaType="String" />
+			<collection property="checkList" ofType="CareDetails">
+				<id column="rcv_id" jdbcType="VARCHAR" property="id" javaType="String" />
+				<result column="care_check" jdbcType="VARCHAR" property="check" javaType="String" />
+				<association property="serviceInfo" column="service_id" javaType="Service">
+					<id column="service_id" jdbcType="VARCHAR" property="id" javaType="String" />
+					<result column="service_name" jdbcType="VARCHAR" property="title" javaType="String" />
+				</association>
+				<association property="carePet" column="pet_id" javaType="Pet">
+					<id column="pet_id" jdbcType="VARCHAR" property="id" javaType="String" />
+					<result column="pet_name" jdbcType="VARCHAR" property="name" javaType="String" />
+				</association>
+			</collection>
+		</collection>
+	</resultMap>
+	
+    <select id="getCareRecordByCareId" parameterType="int" resultMap="careRecordMap">
+    	SELECT c.care_id, c.start_date, c.end_date, c.member_id, c.sitter_id,
+            cr.record_id, cr.write_date, cr.title, cr.content, 
+    		ch.care_check, 
+    		rs.rcv_id,
+    		s.service_id, s.title AS service_name, 
+    		p.pet_id, p.name AS pet_name,
+    		m.name AS member_name,
+    		sm.name AS sitter_name
+		FROM care c
+    		FULL OUTER JOIN care_record cr ON c.care_id = cr.care_id
+    		FULL OUTER JOIN member m ON c.member_id = m.member_id
+    		FULL OUTER JOIN member sm ON c.sitter_id = sm.member_id
+    		FULL OUTER JOIN care_checklist ch ON cr.record_id = ch.record_id
+    		FULL OUTER JOIN receive_service rs ON ch.rcv_id = rs.rcv_id
+    		FULL OUTER JOIN service s ON rs.service_id = s.service_id
+    		FULL OUTER JOIN pet p ON rs.pet_id = p.pet_id
+		WHERE c.care_id = #{careId}
+		ORDER BY cr.write_date, p.pet_id
+    </select>
+    
+    <!-- 돌봄 내역에 대한 돌봄 기간 및 돌봄일지 개수 반환 -->
+    <resultMap id="careRecordCountMap" type="java.util.Map">
+    	<id column="dayCount" property="dayCount" />
+    	<id column="countCareRecord" property="countCareRecord" />
+    </resultMap>
+    
+    <select id="findCareRecordCount" parameterType="int" resultMap="careRecordCountMap">
+    	SELECT TO_DATE(c.end_date) - TO_DATE(c.start_date) AS dayCount, 
+    		COUNT(cr.care_id) AS countCareRecord
+		FROM care c JOIN care_record cr ON c.care_id = cr.care_id
+		WHERE c.care_id =#{careId}
+		GROUP BY cr.care_id, c.start_date, c.end_date
+    </select> 
+    
+    <!-- 돌봄일지 추가 -->
+    <insert id="createCareRecord" parameterType="CareRecord">
+		<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			SELECT record_seq.nextval AS id FROM DUAL
+		</selectKey>		
+		INSERT INTO care_record (record_id, write_date, title, content, care_id)
+		VALUES (#{id}, SYSDATE, #{title},  #{content}, #{careInfo.id})
+	</insert>
+	
+	<!-- 돌봄상태 변경 -->
+	<update id="updateCareStatus">
+		UPDATE care
+		SET care_status = #{status}
+		WHERE care_id = #{careId}
+	</update>
+</mapper>

@@ -1,0 +1,151 @@
+#logo {
+    z-index: 1;
+   	margin-left: 14px;
+}
+
+#petSitterImg {
+	width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#caringPet {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    padding: 6px 8px;
+    background-color: #f7f7f9;
+    font-size: 12px;
+}
+
+#headerWrap {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+#likeListWrap {
+    margin: 56px auto 0px auto;
+    width: 1194px;
+}
+
+#pageTit {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+#petSitterInfoBox {
+    position: relative;
+    display: flex;
+    margin-bottom: 60px;
+    padding: 20px;
+    width: 1154px;
+    border-radius: 4px;
+    border: 1px solid #d7dce5;
+
+}
+
+#petSitterLocation {
+        position: absolute;
+    top: 18%;
+    left: 4.8%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 70px;
+    height: 24px;
+    background-color: #E5EDEF;
+    color: #009C8F;
+    border-radius: 5px 0px 5px 0px;
+    font-size: 12px;
+}
+
+#petSitterInfoInner {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    width: 100%;
+    height: 140px;
+}
+
+#likeCountWrap {
+    position: absolute;
+    top: 78%;
+    left: 16.5%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14px;
+}
+
+#likeCount {
+    padding-left: 4px;
+    font-size: 12px;
+}
+
+#petSitterNameLikeWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    width: 100%;
+    height: 20px;
+}
+
+#petSitterName {
+	cursor: pointer;
+    font-size: 18px;
+}
+
+#petSitterIntro {
+    font-size: 14px;
+}
+
+#petSitterService {
+    font-size: 14px;
+    color: #535353;
+}
+
+#caringDateWrap {
+    display: flex;
+    justify-content: space-between;
+    width: 780px;
+}
+
+#caringPetsWrap {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+#serviceCaringWrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+#petSitterServiceWrap {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#petSitterService {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #E3C1A2;
+}
+
+#serviceTit {
+    font-size: 14px;
+}
+
+#caringTit {
+    font-size: 14px;
+    color: #535353;
+}
+
+#likeOnImg, #likeImg {
+	cursor: pointer;
+}

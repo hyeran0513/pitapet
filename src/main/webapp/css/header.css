@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#logo {
+   	margin-right: 10px;
+ }
+
+#headerWrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+}
+
+#headerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1194px;
+    height: 80px;
+}
+
+#logoWrap {
+    display: flex;
+}
+
+#logo {
+    margin-right: 20px;
+    font-size: 24px;
+    font-family: 'Righteous', cursive;
+    color: #89A0F2;
+    cursor: pointer;
+}
+
+#gnb {
+    display: flex;
+    align-items: center;
+}
+
+#sitterListLink,
+#reviewLink,
+#likeLink,
+#myPageLink {
+    margin-left: 40px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#headerLoginBtn {
+        margin-left: 60px;
+    width: 100px;
+    height: 34px;
+    font-size: 14px;
+    border: 1px solid #009C8F;
+    border-radius: 100px;
+    color: #009C8F;
+    background-color: white;
+    cursor: pointer;
+}
+
+#headerLoginBtn:focus {
+	outline: none;
+}

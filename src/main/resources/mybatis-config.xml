@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+    	<setting name="cacheEnabled" value="false"/>
+  	</settings>
+	<typeAliases>
+		<typeAlias type="model.dto.Care" alias="Care" />
+		<typeAlias type="model.dto.CareDetails" alias="CareDetails" />
+		<typeAlias type="model.dto.CareRecord" alias="CareRecord" />
+		<typeAlias type="model.dto.LikeList" alias="LikeList" />
+		<typeAlias type="model.dto.Member" alias="Member" />
+		<typeAlias type="model.dto.Pet" alias="Pet" />
+		<typeAlias type="model.dto.PetKind" alias="PetKind" />
+		<typeAlias type="model.dto.PetSitter" alias="PetSitter" />
+		<typeAlias type="model.dto.PetSitterApplication" alias="PetSitterApplication" />
+		<typeAlias type="model.dto.Review" alias="Review" />
+		<typeAlias type="model.dto.Service" alias="Service" />
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl" />
+				<property name="username" value="dbpro0201" />
+				<property name="password" value="dwudbp19" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="model/dao/mybatis/mapper/ServiceMapper.xml" />
+		<mapper resource="model/dao/mybatis/mapper/MemberMapper.xml" />
+		<mapper resource="model/dao/mybatis/mapper/CareMapper.xml" />
+	</mappers>
+</configuration>

@@ -1,0 +1,414 @@
+@charset "UTF-8";
+
+#headerWrap {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+#calendar {
+	contentHeight: 40px;
+}
+   
+#pageWrap {
+    margin: 0 auto;
+    width: 1194px;
+}
+
+#pageTit {
+    margin: 80px 0px;
+    font-size: 24px;
+}
+
+#pageBody {
+    display: flex;
+    justify-content: space-between;
+}
+
+#petSitterInfoWrap {
+    width: 684px;
+}
+
+#sitterInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sitterInfoInner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 544px;
+}
+
+#sitterNameLikeWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sitterName {
+    font-size: 18px;
+}
+
+#likeCount {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+}
+
+#likeImg {
+    margin-right: 4px;
+    width: 12px;
+    height: 12px;
+}
+
+#sitterIntroTextWrap {
+    margin-top: 80px;
+}
+
+#subPageTit {
+    margin-right: 20px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#sitterIntroText {
+    padding: 20px;
+    width: 644px;
+    background-color: #F1F1F1;
+    font-size: 14px;
+}
+
+#serviceWrap,
+#ablePetWrap,
+#reviewWriteWrap {
+    margin-top: 80px;
+}
+#ablePetInner {
+    display: flex;
+}
+
+#ablePet {
+    margin-right: 40px;
+    font-size: 14px;
+}
+#reviewText {
+    padding-top: 20px;
+    width: 100%;
+    height: 60px;
+    resize: none;
+}
+
+#reviewBtnWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#reviewBtn {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #89A0F2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#reviewerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#reviewerInfo {
+    width: 470px;
+}
+
+#reviewDate {
+	margin-top: -34px;
+    font-size: 14px;
+    color: #C4C4C4;
+}
+
+#line {
+    margin: 40px 0px;
+    border: 1px dotted #EAEAEA;
+}
+
+#moreReviewBtn {
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #EAEAEA;
+    background-color: white;
+    cursor: pointer;
+}
+
+#detailTit {
+	display: flex;
+}
+
+#tagWrap {
+	margin-right: 20px;
+}
+
+#sitterNewImg {
+	margin-top: 6px;
+}
+      
+       
+#tagWrap {
+     margin-top: 10px;
+     font-size: 12px;
+     color: #E3C1A2;
+}
+       
+#locationWrap {
+	margin: 0px 0px 10px 0px;
+    display: flex;
+    color: #C4C4C4;
+}
+      
+#detailTit {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#reviewImg {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+
+#reviewImgScopeWrap {
+    display: flex;
+    justify-content: space-between;
+}
+         
+#reviewTit {
+	margin-right: 20px;
+  	font-size: 16px;
+ 	font-weight: bold;
+  	color: #535353;
+}
+   
+#reviewTitWrap {
+   	margin-bottom: 40px;
+   	display: flex;
+   	align-items: center;
+}
+
+#reviewScopeWrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 130px;
+}
+
+#scopeWrap {
+    display: flex;
+    margin-top: 6px;
+    color: #C4C4C4;
+}
+
+#scope {
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+#periodWrap {
+    width: 444px;
+}  
+ 
+#periodInner {
+	padding: 20px;
+	box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+	background: #F8F9FA;
+	border-radius: 5px;
+}
+
+#ableCalWrap {       
+    width: 404px;
+}
+
+#ableCalTit {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#reservationBtn {
+    margin-top: 40px;
+    width: 404px;
+    height: 40px;
+    color: white;
+    background-color: #89A0F2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#askPeriodTit {
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+	
+/*datepicker에서 사용한 이미지 버튼 style적용*/
+img.ui-datepicker-trigger {
+    margin-left:5px; vertical-align:middle; cursor:pointer;
+}
+
+#fromDate,
+#toDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+input::-webkit-input-placeholder {
+    color: black;
+    font-size: 14px;
+}
+
+input:-ms-input-placeholder {
+    color: black;
+    font-size: 14px;
+}
+
+#pickPeriodWrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 404px;
+    height: 70px;
+    border-radius: 5px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    background: white;
+}
+
+#calendarImg {
+    position: absolute;
+    top: 34%;
+    left: 6%;
+    transform: (50%, 50%);
+}
+
+#pickPeriodInner {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+
+#carePriceKind {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #7AAFFF;
+}
+
+#carePrice {
+    float: right;
+    margin-top: 20px;
+    font-size: 18px;
+    color: red;
+}
+
+#selectPetTit {
+    margin: 0px 0px 20px 0px;
+    font-size: 14px;
+}
+
+#headerWrap {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+#reviewContent {
+	border: 1px solid #EAEAEA;
+	padding: 20px;
+    width: 644px;
+    height: 60px;
+    resize: none;
+}
+
+#reviewerImg {
+	margin-right: 10px;
+}
+
+#calIntro {
+	margin-top: 20px;
+    font-size: 14px;
+    color: #E3C1A2;
+}
+
+#reviewerName {
+	margin-top: -10px;
+}
+
+#service {
+    display: flex;
+    width: 206px;
+    border-radius: 5px;
+}
+
+#serviceTitContentWrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#serviceTit {
+    font-size: 14px;
+}
+
+#serviceContent {
+    font-size: 12px;
+    color: #C4C4C4;
+}
+
+#serviceImg {
+    margin-right: 20px;
+    width: 34px;
+    height: 34px;
+}
+
+#serviceInner {
+	display: inline-flex;
+    flex-wrap: wrap;
+    width: 684px;
+    border-radius: 5px;
+    gap: 30px;
+}
+  
+#ablePet {
+	margin-right: 20px;
+	padding: 4px 8px;
+	border: 1px solid #89A0F2;
+	color: #89A0F2;
+	border-radius :50px;
+}
+      
+#sitterNewImg {
+	width: 100px;
+	height: 90px;
+}
+      
+#logo {
+    z-index: 1;
+   	margin-left: 14px;
+}
+
+#subPageWrap {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+	height: 40px;
+}

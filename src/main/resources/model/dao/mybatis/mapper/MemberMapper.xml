@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="model.dao.mybatis.mapper.MemberMapper">
+	
+	<!-- 특정 회원정보 반환 -->
+	<select id="selectMember" parameterType="String" resultType="Member">
+		SELECT member_id AS id, password, name, birth, gender, email, phone, address, identity, img_src AS profileImage
+        FROM member JOIN attachment USING (member_id) 
+        WHERE member_id = #{memberId} AND category_id = 'AtchId04'
+	</select>
+	
+	<!-- 회원정보 생성 -->
+	<insert id="createMember" parameterType="Member">
+		INSERT ALL INTO MEMBER 
+		VALUES (#{id}, #{password}, #{name}, TO_DATE(#{birth}, 'YYYYMMDD'), #{gender}, #{email}, #{phone}, #{address}, #{identity}) 
+		INTO ATTACHMENT VALUES (#{profileImage}, #{id}, 'AtchId04') 
+		SELECT * FROM DUAL
+	</insert>
+	
+	<!-- 회원 정보 업데이트 -->
+	<update id="updateMember" parameterType="Member">
+		UPDATE member 
+		<set>
+			<if test="password == null">
+				email = #{email}, phone = #{phone}, address = #{address} 
+			</if>
+			<if test="password != null">
+				password = #{password}, email = #{email}, phone = #{phone}, address = #{address} 
+			</if>
+		</set>
+		WHERE member_id = #{id}
+	</update>
+	
+	<!-- 프로필 사진 삭제 -->
+	<delete id="deleteProfilePic" parameterType="String">
+		DELETE FROM attachment
+		WHERE member_id = #{memberId} AND category_id = 'AtchId04'
+	</delete>
+	
+	<!-- 프로필 사진 추가 -->
+	<insert id="addAttachment" parameterType="String">
+		INSERT INTO attachment (img_src, member_id, category_id)
+		VALUES (#{image}, #{memberId}, 'AtchId04')
+	</insert>
+</mapper>

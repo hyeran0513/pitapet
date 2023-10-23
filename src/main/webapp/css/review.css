@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+#headerWrap {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+#reviewPageWrap {
+    margin: 56px auto 0px auto;
+    width: 1194px;
+}
+
+#pageTit {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+#reviewBox {
+    width: 362px;
+    height: 424px;
+    border-radius: 5px;
+    position: relative;
+    background: white;
+    border: 1px solid #d7dce5;
+}
+
+#reviewBoxInner {
+    display: flex;
+    flex-direction: column;
+    width: 364px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+#reviewerDateWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#reviewer {
+    font-size: 18px;
+}
+
+#reviewDate {
+    font-size: 12px;
+    color: #c4c4c4;
+}
+
+#review {
+    font-size: 14px;
+	color: #757575;
+	height: 96px;
+}
+
+#targetScopeWrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 20px;
+	width: 324px;
+	border-top: 1px solid #EAEAEA;
+}
+
+#scopeWrap {
+    display: flex;
+    margin-top: auto;
+}
+
+
+#scope {
+    margin-left: 4px;
+}
+
+#reviewBoxWrap {
+    display: flex;
+    width: 1460px;
+    flex-wrap: wrap;
+}
+
+#reviewImg {
+	width: 364px;
+	height: 190px;
+	object-fit: cover;
+	border-radius: 5px 5px 0px 0px;
+}
+
+
+#logo {
+    z-index: 1;
+   	margin-left: 14px;
+}
+
+#reviewBoxContent {
+ 	padding: 20px;
+ }
+    
+#locationWrap {
+ 	display: flex;
+ 	align-items: center;
+ 	margin: 4px 0px 10px 0px;
+ 	color: #C4C4C4;
+	font-size: 12px;
+}
+
+#locationImg {
+   	margin-right: 4px;
+}
+ 	
+#reviewTarget {
+	cursor: pointer;
+  	color: #C4C4C4;
+  	font-size: 12px;
+}
+  
+#reviewBoxWrap {
+	display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 5px;
+    gap: 50px;
+}

@@ -29,11 +29,6 @@
         <form name="form" method="POST" action="<c:url value='/pet/addPet'/>" enctype="multipart/form-data">
 	        <table>
 	            <tr>
-	                <td id="tableTit">반려동물 정보</td>
-	                <td id="tableTit"></td>
-	            </tr>
-	            
-	            <tr>
 	            	<td id="tdTit">사진</td>
 	            	<td><input type="file" name="picture" /></td>
 	            </tr>
@@ -83,7 +78,5 @@
 	        </div>
         </form>
     </div>
-    
-    <%@include file="../components/footer.jsp" %>
 </body>
 </html>

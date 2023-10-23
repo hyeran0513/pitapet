@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 #headerWrap {
-    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    border-bottom: 1px solid #d7dce5;
 }
 
 #reviewPageWrap {
@@ -17,7 +17,7 @@
 #reviewBox {
     width: 362px;
     height: 424px;
-    border-radius: 5px;
+    border-radius: 4px;
     position: relative;
     background: white;
     border: 1px solid #d7dce5;

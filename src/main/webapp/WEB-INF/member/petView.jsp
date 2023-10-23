@@ -23,16 +23,13 @@
     	<c:if test="${param.deleteFailed}">
 			<script> alert("예약 정보가 존재하는 반려동물은 삭제 불가능합니다."); </script>
 		</c:if>
-        <div id="pageTit">반려동물 정보</div>
+        <div id="pageTit">
+        <div>반려동물 정보</div>
+        <c:url value='/pet/addPet' var="addPetUrl"/>
+                  <button id="petInfoAddBtn" onclick="location.href='${addPetUrl}'">추가하기+</button>
+        </div>
         
         <table>
-            <tr>
-                <td id="tableTit">반려동물 정보 추가하기</td>
-                <td id="petInfoAddBtnWrap">
-                	<c:url value='/pet/addPet' var="addPetUrl"/>
-                	<button id="petInfoAddBtn" onclick="location.href='${addPetUrl}'">추가하기+</button>
-                </td>
-            </tr>
 			
 			<c:forEach var="pet" items="${petList}">
 	            <tr id="petInfoBoxWrap">
@@ -56,7 +53,5 @@
          	</c:forEach>
         </table>
     </div>
-    
-    <%@include file="../components/footer.jsp" %>
 </body>
 </html>

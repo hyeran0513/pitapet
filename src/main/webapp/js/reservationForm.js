@@ -19,7 +19,7 @@ $(function() {
 		else {
 			// <반려동물명> 서비스 리스트 출력
 			var newDivElement = document.createElement("div");
-			$(newDivElement).html("[ " + petName + " ]의 서비스 리스트 <br>");
+			$(newDivElement).html("[ " + petName + " ]의 서비스 리스트 <br/><br/>");
 			$(newDivElement).attr("id", petName);
 			$(newInputElement).css("margin-bottom", "20px");
 

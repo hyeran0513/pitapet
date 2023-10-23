@@ -14,10 +14,14 @@
 }
 
 #loginTit {
-    margin-bottom: 40px;
-    font-size: 36px;
+    margin-bottom: 20px;
+    width: 140px;
     font-family: 'Righteous', cursive;
-    color: #89A0F2;
+}
+
+#loginTit img {
+  width: 100%;
+  object-fit: cover;
 }
 
 #loginInner {
@@ -26,43 +30,48 @@
 }
 
 #loginId {
-    margin-bottom: 10px;
+        margin-bottom: 10px;
     padding-left: 20px;
-    width: 420px;
-    height: 50px;
-    border: 1px solid #DCDCDC;
+    width: 300px;
+    height: 38px;
+    border: none;
+    border-radius: 4px;
+    background: #E5EDEF;
 }
 
 #loginPwd {
-    margin-bottom: 40px;
+      margin-bottom: 10px;
     padding-left: 20px;
-    width: 420px;
-    height: 50px;
-    border: 1px solid #DCDCDC;
+    width: 300px;
+    height: 38px;
+    border: none;
+    border-radius: 4px;
+    background: #E5EDEF;
 }
 
 #loginId:focus,
 #loginPwd:focus {
-    outline-color: #89A0F2;
+    outline-color: #009C8F;
 }
 
 #loginBtn {
     margin-bottom: 40px;
-    width: 440px;
-    height: 50px;
-    background-color: #89A0F2;
+    width: 320px;
+    height: 38px;
+    background-color: #009C8F;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 #joinLinkWrap {
-    width: 440px;
+    width: 320px;
     font-size: 12px;
     color: #999999;
 }
 
 #joinLink {
     font-size: 12px;
-    color: #89A0F2;
+    color: #009C8F;
 }

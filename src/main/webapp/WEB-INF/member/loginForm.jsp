@@ -15,7 +15,9 @@
 
 <body id="loginBg">
 	<div id="loginWrap">
-        <div id="loginTit">PIT A PET</div>
+        <div id="loginTit">
+          <img src="/images/logo.svg" />
+        </div>
         <c:if test="${loginIdFailed}">
 	    	<script> alert('${exception}'); </script>
 	 	</c:if>

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 #headerWrap {
-    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    border-bottom: 1px solid #d7dce5;
 }
 
 #pageWrap {
@@ -27,9 +27,38 @@
     align-items: center;
     width: 170px;
     height: 34px;
-    background-color: #f7f7f9;
+    background-color: #f1f1f1;
     border-radius: 50px;
 }
+
+ .form_radio_btn {
+      width: 45%;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+    .form_radio_btn input[type=radio] {
+      display: none;
+    }
+    .form_radio_btn label {
+     display: block;
+    border-radius: 100px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 24px;
+    }
+     
+    .form_radio_btn input[type=radio]:checked + label {
+      background: #fff;
+      color: #666;
+    }
+     
+    .form_radio_btn label:hover {
+      color: #666;
+    }
+     
+    .form_radio_btn input[type=radio] + label {
+      color: #666;
+    }
 
 .container{
 width: 100%;
@@ -65,8 +94,6 @@ justify-content: space-between;
 }
 
 #myInfoWrap {
-    width: 316px;
-    height: 420px;
     border: 1px solid #d7dce5;
     border-radius: 4px;
     background-color: white;
@@ -76,28 +103,33 @@ justify-content: space-between;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 16px;
     width: 276px;
     height: 40px;
+    font-size: 14px;
 }
 
 #myInfo {
-    padding: 20px;
+    padding: 16px;
     width: 276px;
 }
 
 #phone {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    height: 34px;
-    font-size: 14px;
+    font-size: 12px;
+    color: #ccc;
 }
 
+#infoTable {
+  border: 1px solid #d7dce5;
+  border-radius: 4px;
+}
 #myPageBtnWrap {
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -105,17 +137,12 @@ justify-content: space-between;
 #petInfoBtn,
 #registerInfoBtn,
 #applySitterBtn {
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid #009C8F;
-    color: #009C8F;
-    background-color: white;
+    width: 100%;
+    height: 34px;
+    border-radius: 4px;
+    background-color: #f7f7f9;
+    border: 1px solid #d7dce5;
     cursor: pointer;
-}
-
-#applySitterBtn {
-    margin-left: 20px;
 }
 
 #editBtn {
@@ -129,10 +156,11 @@ justify-content: space-between;
 }
 
 th {
-    background-color: #f7f7f9;
-    border: 1px solid #d7dce5;
+   background-color: #f7f7f9;
     font-size: 14px;
     font-weight: normal;
+    border-radius: 4px;
+    border: 1px solid #d7dce5;
 }
 
 td {
@@ -142,6 +170,7 @@ td {
 th, td {
     height: 40px;
     text-align: center;
+    font-size: 14px;
 }
 
 table {
@@ -151,23 +180,23 @@ table {
 }
 
 #careBtn {
-    width: 80px;
-    height: 24px;
+   width: 80px;
+    height: 28px;
     border: 1px solid #009C8F;
     color: #009C8F;
-    border-radius: 50px;
+    border-radius: 4px;
     background-color: white;
     cursor: pointer;
+    font-size: 14px;
 }
 
 #reviewBtn,
 #acceptBtn {
-    margin-left: 10px;
         width: 80px;
-    height: 24px;
+    height: 28px;
     border: 1px solid #F5C751;
     color: #F5C751;
-    border-radius: 50px;
+    border-radius: 4px;
     background-color: white;
     cursor: pointer;
 }
@@ -191,7 +220,6 @@ table {
    
 #cameraWrap {
 	display: flex;
-	height: 34px;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -199,9 +227,10 @@ table {
 #changeImg {
 	padding: 4px 8px;
 	border-radius: 50px;
-	color: #C4C4C4;
-	border: 1px solid #C4C4C4;
+	color: #999;
+	border: 1px solid #d7dce5;
 	background: white;
 	cursor: pointer;
 	font-size: 12px;
 }
+

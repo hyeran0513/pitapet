@@ -6,27 +6,30 @@
 }
 
 #headerWrap {
-    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    border-bottom: 1px solid #d7dce5;
 }
 
 #pageWrap {
-    margin: 100px auto 0px auto;
+    margin: 56px auto 0px auto;
     width: 1194px;
 }
 
 #pageTit {
-    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
     font-size: 24px;
 }
 
 #tableTit {
     padding-left: 20px;
     height: 40px;
-    background-color: #F3F3F3;
+    background-color: #f7f7f9;
     font-size: 18px;
 }
 
 table {
+  width: 100%;
     border: 1px solid #EAEAEA;
     border-collapse: collapse;
     border-radius: 5px;
@@ -67,35 +70,37 @@ td {
 }
 
 #petInfoAddBtn {
-    width: 80px;
-    height: 24px;
+        width: 80px;
+    height: 34px;
     background-color: white;
-    border: 1px solid #b1b1b1;
+    border: 1px solid #d7dce5;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 #petInfoBox {
     display: flex;
     align-items: center;
     width: 1054px;
-    height: 100px;
+    height: 120px;
     background-color: white;
 }
 
 #petImg {
-	width: 90px;
+	width: 120px;
     height: 90px;
+    border-radius: 4px;
 }
 
 #deleteImg {
-    margin-left: 60px;
+   margin: 0px 20px;
     cursor: pointer;
 }
 
 #petInfoWrap {
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 #petBirth {
@@ -106,8 +111,12 @@ td {
 
 #petKind {
     margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 8px;
+    background-color: #f7f7f9;
     font-size: 12px;
-    color: #E3C1A2;
 }
 
 #petInfoBoxWrap {

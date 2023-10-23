@@ -25,36 +25,23 @@
     justify-content: center;
 }
 
-#bannerText {
-    position: absolute;
-    top: 500px;
-    left: 42%;
-    transform: (-50%, 0%);
+#scheduleTit {
+  
+    margin-bottom: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
 }
-
-#bannerTit {
-    font-family: 'Righteous', cursive;
-    font-size: 48px;
-}
-
-#bannerSubTit {
-    padding-left: 68px;
-    color: #FB7D71;
-    font-size: 24px;
-}
-
-#bannerInfo {
-    margin: 10px 0px 0px 4px;
-}
-
-#scheduleTit,
 #reviewTit {
-    font-size: 24px;
+    
+    font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 #scheduleWrap,
 #reviewWrap {
-    margin-top: 80px;
+    margin-top: 56px;
 }
 
 #scheduleTit span,
@@ -118,7 +105,7 @@ table.calendar td{
     border-radius: 5px;
     position: relative;
     background: white;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    border: 1px solid #d7dce5;
 }
 
 #reviewBoxInner {
@@ -130,8 +117,8 @@ table.calendar td{
 }
 
 * {
-	padding: 0px;
-	margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #reviewerDateWrap {
@@ -163,24 +150,28 @@ table.calendar td{
     width: 1194px;
 }
 
-#reviewMoreBtn {
-    margin: 60px 0px;
-    display: flex;
-    justify-content: flex-end;
-    color:#7AAFFF;
-    cursor: pointer;
+.mainpage-subtitle {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
-    	
+#reviewMoreBtn {
+    color:#009C8F;
+    cursor: pointer;
+    font-size: 14px;
+}
+      
       #logo {
     z-index: 1;
-   	margin-left: 14px;
+    margin-left: 14px;
 }
 
-  	#reviewImg {
-	width: 364px;
-	height: 190px;
-	object-fit: cover;
-	border-radius: 5px 5px 0px 0px;
+    #reviewImg {
+  width: 364px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 5px 5px 0px 0px;
 }
 
 #targetLocation {
@@ -200,86 +191,82 @@ table.calendar td{
     transform: translate(-50%, -50%);
 }
 
-#scheduleTit {
-	margin: 80px 0px;
-}
 
 #scheduleWrap {
-	margin: 60px 0px;
+  margin: 50px 0px;
 }
 
 #demo {
-	z-index: 0;
+  z-index: 0;
 }
-      	
-     	.carousel-inner > .carousel-item > img{ 
-         	width: 300px; height: 800px;
-         	object-fit: cover;
+        
+      .carousel-inner > .carousel-item > img{ 
+          width: 300px; height: 600px;
+          object-fit: cover;
       }
          
       #bannerText {
-    position: absolute;
-    top: 620px;
-    left: 45%;
-    transform: (-50%, 0%);
+        position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1194px;
 }
 
 #bannerTit {
-    font-family: 'Righteous', cursive;
-    font-size: 48px;
-    color: black;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #009C8F;  
 }
-
-#bannerSubTit {
-    padding-left: 68px;
-    color: #FB7D71;
-    font-size: 24px;
-}
-
 #bannerInfo {
-    margin: 10px 0px 0px 4px;
-    color: #535353;
+    margin-top: 20px;
+    width: 320px;
+    color: #FFF;
+    font-weight: 700;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
 }
 
 #targetScopeWrap {
-     		display: flex;
-     		justify-content: space-between;
-     		align-items: center;
-     		padding: 8px 20px;
-     		width: 100%;
-     		border-top: 1px solid #EAEAEA;
-     	}
-     	
-     	#scopeWrap {
-     		display: flex;
-     		margin-top: auto;
-     	}
-     	
-     	#scope {
-     		margin-left: 4px;
-     	}
-     	
-     	#reviewBoxContent {
-     		padding: 20px;
-     	}
-     	
-     	#locationWrap {
-     		display: flex;
-     		align-items: center;
-     		margin-bottom: 10px;
-     		color: #C4C4C4;
-     		font-size: 12px;
-     	}
-     	
-     	#locationImg {
-     		margin-right: 4px;
-     	}
-     	
-     	#review {
-     		height: 96px;
-     	}
-     	
-     	#reviewTarget {
-     		color: #C4C4C4;
-     		font-size: 12px;
-     	}
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 20px;
+        width: 100%;
+        border-top: 1px solid #EAEAEA;
+      }
+      
+      #scopeWrap {
+        display: flex;
+        margin-top: auto;
+      }
+      
+      #scope {
+        margin-left: 4px;
+      }
+      
+      #reviewBoxContent {
+        padding: 20px;
+      }
+      
+      #locationWrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #C4C4C4;
+        font-size: 12px;
+      }
+      
+      #locationImg {
+        margin-right: 4px;
+      }
+      
+      #review {
+        height: 96px;
+      }
+      
+      #reviewTarget {
+        color: #C4C4C4;
+        font-size: 12px;
+      }

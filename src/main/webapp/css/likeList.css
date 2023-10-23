@@ -7,7 +7,7 @@
 	width: 200px;
     height: 140px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 #caringPet {
@@ -21,7 +21,7 @@
 }
 
 #headerWrap {
-    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    border-bottom: 1px solid #d7dce5;
 }
 
 #likeListWrap {
@@ -46,9 +46,9 @@
 }
 
 #petSitterLocation {
-        position: absolute;
-    top: 18%;
-    left: 4.8%;
+     position: absolute;
+    top: 17.9%;
+    left: 4.6%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
@@ -58,7 +58,7 @@
     height: 24px;
     background-color: #E5EDEF;
     color: #009C8F;
-    border-radius: 5px 0px 5px 0px;
+    border-radius: 4px 0px 4px 0px;
     font-size: 12px;
 }
 

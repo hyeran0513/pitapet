@@ -1,11 +1,7 @@
 @charset "UTF-8";
 
 #headerWrap {
-    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
-}
-
-#calendar {
-	contentHeight: 40px;
+    border-bottom: 1px solid #d7dce5;
 }
    
 #pageWrap {
@@ -39,7 +35,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 550px;
+    width: 510px;
 }
 
 #sitterNameLikeWrap {
@@ -318,10 +314,6 @@ input:-ms-input-placeholder {
     font-size: 14px;
 }
 
-#headerWrap {
-    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
-}
-
 #reviewContent {
 	border: 1px solid #EAEAEA;
 	padding: 20px;
@@ -393,7 +385,7 @@ input:-ms-input-placeholder {
 }
       
 #sitterNewImg {
-	width: 100px;
+	width: 140px;
     height: 100px;
     background-color: #f7f7f9;
     border-radius: 4px;

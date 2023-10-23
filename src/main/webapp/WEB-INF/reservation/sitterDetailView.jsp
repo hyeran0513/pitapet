@@ -272,8 +272,6 @@
         </div>
     </div>
     </div>
-    
-    <%@include file="../components/footer.jsp" %>
     </div>
 </body>
 </html>

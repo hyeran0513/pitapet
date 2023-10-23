@@ -87,7 +87,6 @@
             <div class="carousel-item active"> <!--가로--> 
 	            <img class="d-block w-100" src="/images/bannerImg1.svg?auto=compress&cs=tinysrgb&h=650&w=940" alt="First slide"> 
 			 	<div id="bannerText">
-		        	<div id="bannerSubTit">핏어펫</div> 
 		           	<div id="bannerTit">PIT A PET</div>
 		           	<div id="bannerInfo">반려동물 돌보미 매칭 서비스</div> 
 				</div>
@@ -95,11 +94,13 @@
             
             <div class="carousel-item"> 
            		<img class="d-block w-100" src="/images/bannerNew2.svg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Second slide"> 
+              <div id="bannerText">
+                <div id="bannerTit">PIT A PET</div>
+                <div id="bannerInfo">반려동물 돌보미 매칭 서비스</div> 
+        </div>
            	</div>
                           
-            <div class="carousel-item"> 
-            	<img class="d-block w-100" src="/images/bannerNew3.svg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Third slide"> 
-            </div> <!-- / 슬라이드 쇼 끝 --> <!-- 왼쪽 오른쪽 화살표 버튼 --> 
+            <!-- / 슬라이드 쇼 끝 --> <!-- 왼쪽 오른쪽 화살표 버튼 --> 
             
             <a class="carousel-control-prev" href="#demo" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> 
                                 <!-- <span>Previous</span> -->
@@ -111,63 +112,61 @@
             <ul class="carousel-indicators"> 
             	<li data-target="#demo" data-slide-to="0" class="active"></li>
                	<!--0번부터시작--> <li data-target="#demo" data-slide-to="1"></li> 
-                <li data-target="#demo" data-slide-to="2"></li> 
             </ul> <!-- 인디케이터 끝 --> 
     	</div>
     </div>
        
-	<div id="mainPageWrap">                             
-        <div id="scheduleWrap">
-            <div id="scheduleTit">일정 <span>schedule</span></div>
-        	<div id="calendar"></div>
-        </div>
-
-        <div id="reviewWrap">
-            <div id="reviewTit">이용 후기 <span>review</span></div>
+	<div id="mainPageWrap">
+	<div id="reviewWrap">
+	         <div class="mainpage-subtitle">
+            <div id="reviewTit">이용 후기</div>
             <div id="reviewMoreBtnWrap">
-            	<c:url value="/review/listReview" var="reviewUrl"/>
+              <c:url value="/review/listReview" var="reviewUrl"/>
                 <div id="reviewMoreBtn" onClick="location.href='${reviewUrl}'">더 보기+</div>
+            </div>
             </div>
        
 
             <div id="reviewBoxWrap">
-            	<c:forEach var="review" items="${reviews}">
-            		<c:url value="/reservation/viewSitterDetail" var="viewUrl">
-						<c:param name="sitterId" value="${review.careInfo.sitter.sitter.id}" />
-					</c:url>
-            		<div id="reviewBox">
-                    	<c:if test="${empty review.images}">
-                    		<img src="../images/reviewNullImg.svg" id="reviewImg"/>
-                    	</c:if>
-                    	<c:if test="${not empty review.images}">
-                    		<img src="${review.images[0]}" id="reviewImg"/>
-                    	</c:if>
-                    	<div id="reviewBoxInner">
-                    		<div id="reviewBoxContent">
-	                        	<div id="reviewerDateWrap">
-	                               	<div id="reviewer">${review.careInfo.companion.id} 님</div>
-	                            	<div id="reviewDate">${fn:split(review.writeDate, ' ')[0]}</div>
-	                        	</div>
-	                        	<div id="locationWrap">
-	                        		<img src="/images/location.svg" id="locationImg"/>
-	                        		${review.careInfo.sitter.sitter.address}
-	                        	</div>
-	                        	<div id="review">${review.content}</div>
-                        	</div>
-                        	<div id="targetScopeWrap">
-                            	<div id="reviewTarget" onClick="location.href='${viewUrl}'">about ${review.careInfo.sitter.sitter.id}</div>
-                            	<div id="scopeWrap">
-                                	<img src="../images/star.svg"/>
-                                	<div id="scope">${review.rate}</div>
-                            	</div>
-                        	</div>
-                    	</div>
-                	</div>
-            	</c:forEach>
+              <c:forEach var="review" items="${reviews}">
+                <c:url value="/reservation/viewSitterDetail" var="viewUrl">
+            <c:param name="sitterId" value="${review.careInfo.sitter.sitter.id}" />
+          </c:url>
+                <div id="reviewBox">
+                      <c:if test="${empty review.images}">
+                        <img src="../images/reviewNullImg.svg" id="reviewImg"/>
+                      </c:if>
+                      <c:if test="${not empty review.images}">
+                        <img src="${review.images[0]}" id="reviewImg"/>
+                      </c:if>
+                      <div id="reviewBoxInner">
+                        <div id="reviewBoxContent">
+                            <div id="reviewerDateWrap">
+                                  <div id="reviewer">${review.careInfo.companion.id} 님</div>
+                                <div id="reviewDate">${fn:split(review.writeDate, ' ')[0]}</div>
+                            </div>
+                            <div id="locationWrap">
+                              <img src="/images/location.svg" id="locationImg"/>
+                              ${review.careInfo.sitter.sitter.address}
+                            </div>
+                            <div id="review">${review.content}</div>
+                          </div>
+                          <div id="targetScopeWrap">
+                              <div id="reviewTarget" onClick="location.href='${viewUrl}'">about ${review.careInfo.sitter.sitter.id}</div>
+                              <div id="scopeWrap">
+                                  <img src="../images/star.svg"/>
+                                  <div id="scope">${review.rate}</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </c:forEach>
             </div>
+        </div>                             
+        <div id="scheduleWrap">
+            <div id="scheduleTit">일정</div>
+        	<div id="calendar"></div>
         </div>
     </div>
-    
-    <%@include file="../components/footer.jsp" %>
 </body>
 </html>

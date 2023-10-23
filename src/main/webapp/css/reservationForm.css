@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 #headerWrap {
-    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    border-bottom: 1px solid #d7dce5;
 }
 
 #reservationFormWrap {
-    margin: 100px auto 0px auto;
+    margin: 56px auto 0px auto;
     width: 1194px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 #subPageTit {
-    margin: 80px 0px 40px 0px;
+    margin: 30px 0px;
     font-size: 18px;
 }
 
@@ -123,12 +123,12 @@ a { color:#000000;text-decoration:none; }
 
 
 #reservationBtn {
-    margin-top: 80px;
+        margin-top: 20px;
     float: right;
     width: 120px;
     height: 40px;
     border-radius: 5px;
-    background: #89A0F2;
+    background: #009C8F;
     color: white;
     border: none;
     cursor: pointer;
@@ -222,8 +222,8 @@ input:-ms-input-placeholder {
 	display: flex;
 	align-items: center;
 	margin-top: 8px;
-	font-size: 16px;
-	color: #89A0F2;
+	font-size: 14px;
+	color: #009C8F;
 }
 
 #petCheckBoxWrap {
@@ -232,7 +232,7 @@ input:-ms-input-placeholder {
 	width: 200px;
 	height: 260px;
 	border-radius: 10px;
-	box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+	border: 1px solid #d7dce5;
 }
 
 #tagCheckWrap {
@@ -263,8 +263,13 @@ margin-top: 20px;
 }
 
 #petInfoKind {
-	font-size: 12px;
-	color: #E3C1A2;
+	    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    padding: 6px 8px;
+    background-color: #f7f7f9;
+    font-size: 12px;
 }
 
 #petCheckImg {
@@ -280,7 +285,7 @@ margin-top: 20px;
 }
 
 #pageBg {
-	background-color: #F8F9FA;
+	background-color: #FFF;
 }
 
 #petCheckBoxWrap {
@@ -293,10 +298,11 @@ margin-top: 20px;
 
 #petSitterService {
 	padding: 20px 20px 0px 20px;
-	width: 1154px;
-	background: white;
-	border-radius: 5px;
-	border: 1px solid #EAEDEF;
+    width: 1154px;
+    background: white;
+    border-radius: 4px;
+    background-color: #f7f7f9;
+    font-size: 14px;
 }
 
 #reviewText {
@@ -307,7 +313,7 @@ margin-top: 20px;
     resize: none;
     background: white;
 	border-radius: 5px;
-	border: 1px solid #EAEDEF;
+	border: 1px solid #d7dce5;
 }
 
 #reviewText:focus {

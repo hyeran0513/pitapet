@@ -16,7 +16,7 @@ function searchSitterPageInfo() {
 	$("#reservationInfoWrap").empty();
 	$("#reservationInfoWrap").append("<img src='/images/sole.svg'/>  ");
 	$("#reservationInfoWrap").append("예약 정보");
-	$("#reservationInfoWrap").append("<br/>");
+	$("#reservationInfoWrap").append("<br/><br/>");
 	var careTableElement = document.createElement("table");
 	$(careTableElement).attr("id", "infoTable");
 	var careTrElement = document.createElement("tr");
@@ -94,7 +94,7 @@ function searchSitterPageInfo() {
 	$("#reservationInfoWrap").append("<br/><br/><br/>");
 	$("#reservationInfoWrap").append("<img src='/images/sole.svg'/>  ");
 	$("#reservationInfoWrap").append("돌보미 정보");
-	$("#reservationInfoWrap").append("<br/>");
+	$("#reservationInfoWrap").append("<br/><br/>");
 	var newTableElement = document.createElement("table");
 	$(newTableElement).attr("id", "infoTable");
 	var newTrElement = document.createElement("tr");
@@ -160,7 +160,7 @@ function searchSitterPageInfo() {
 	$("#reservationInfoWrap").append("<br/><br/><br/>");
 	$("#reservationInfoWrap").append("<img src='/images/sole.svg'/>  ");
 	$("#reservationInfoWrap").append("돌봄 가능한 반려동물 정보");
-	$("#reservationInfoWrap").append("<br/>");
+	$("#reservationInfoWrap").append("<br/><br/>");
 	
 	var newTableElement2 = document.createElement("table");
 	$(newTableElement2).attr("id", "infoTable2");
@@ -190,7 +190,7 @@ function searchSitterPageInfo() {
 	$("#reservationInfoWrap").append("<br/><br/><br/>");
 	$("#reservationInfoWrap").append("<img src='/images/sole.svg'/>  ");
 	$("#reservationInfoWrap").append("가능한 서비스 정보");
-	$("#reservationInfoWrap").append("<br/>");
+	$("#reservationInfoWrap").append("<br/><br/>");
 	
 	var newTableElement3 = document.createElement("table");
 	$(newTableElement3).attr("id", "infoTable3");

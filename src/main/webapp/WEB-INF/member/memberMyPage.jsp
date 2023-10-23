@@ -36,8 +36,15 @@
             <div id="pageTit">마이페이지</div>
             <c:if test="${sessionScope.identity == 'S'}">
             	<div id="changeBtnWrap">
-	                <button id="memberBtn">보호자</button>
-	                <button id="sitterBtn">돌보미</button>
+	            	<div class="form_radio_btn">
+						      <input id="memberBtn" type="radio" name="userType" value="member" checked>
+						      <label for="memberBtn">보호자</label>
+						    </div>
+						                   
+						    <div class="form_radio_btn">
+						      <input id="sitterBtn" type="radio" name="userType" value="sitter">
+						      <label for="sitterBtn">돌보미</label>
+						    </div>
             	</div>
             </c:if>
             <c:if test="${param.cancelFailed}">
@@ -46,6 +53,7 @@
         </div>
 
         <div id="container">
+          <div>
             <div id="myInfoWrap">
                 <div id="myInfoTitWrap">
                     <div id="myInfoTit">내 정보</div>
@@ -91,6 +99,7 @@
 	                        </c:otherwise>
                         </c:choose>
                     </div>
+                </div>
                 </div>
             </div>
 
@@ -147,10 +156,8 @@
                    		</c:if>
                     </c:forEach>
                 </table>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <%@include file="../components/footer.jsp" %>
 </body>
 </html>

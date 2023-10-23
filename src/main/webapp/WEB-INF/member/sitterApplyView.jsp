@@ -44,7 +44,5 @@
             <button id="applyBtn" onclick="location.href='${returnUrl}'">돌아가기</button>
         </div>
     </div>
-    
-    <%@include file="../components/footer.jsp" %>
 </body>
 </html>

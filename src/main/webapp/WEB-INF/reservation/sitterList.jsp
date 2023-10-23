@@ -230,8 +230,6 @@
 		</div>
 	</div>
 	
-	<%@include file="../components/footer.jsp" %>
-	
 	<nav class="menu-box-1">
 		<div class="button">
 			<div id="btn">

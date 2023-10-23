@@ -5,20 +5,20 @@
 }
 
 #pageWrap {
-    margin: 100px auto 0px auto;
+    margin: 56px auto 0px auto;
     width: 1194px;
 }
 
 #pageTit {
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     font-size: 24px;
 }
 
 #tableTit {
     padding-left: 20px;
     height: 40px;
-    background-color: #F3F3F3;
-    font-size: 18px;
+    background-color: #f7f7f9;
+    font-size: 14px;
 }
 
 table {
@@ -37,7 +37,8 @@ td {
 }
 
 #tdTit {
-    width: 200px;
+    width: 120px;
+    height: 34px;
     border-right: 1px dotted #EAEAEA;
 }
 
@@ -57,14 +58,14 @@ td {
 #btnWrap {
     display: flex;
     justify-content: flex-end;
-    margin-top: 100px;
+    margin-top: 20px;
     width: 100%;
 }
 
 #myInfoSaveBtn {
     width: 100px;
     height: 40px;
-    background-color: #89A0F2;
+    background-color: #009C8F;
     color: white;
     border-radius: 5px;
     border: none;

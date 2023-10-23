@@ -34,7 +34,7 @@
 		<input type="hidden" name="sitterId" value="${petsitterInfo.sitter.id}" />
 		
 		<div id="targetName">${petsitterInfo.sitter.id} 반려동물 돌보미</div>
-		<div id="carePrice"><img src="/images/dollarImg.svg" id="dollarImg" />이용 요금 ${param.totalPrice}원</div>
+		<div id="carePrice">이용 요금 ${param.totalPrice}원</div>
 		<div id="subPageTit">반려동물 선택하기</div>
 		<div id="petPickWrap">
 			<c:if test="${empty userPetsMap}">
@@ -64,7 +64,5 @@
 		<button id="reservationBtn">예약하기</button>
 	</div>
 	</form>
-
-	<%@include file="../components/footer.jsp" %>
 </body>
 </html>

@@ -14,7 +14,7 @@
 }
 
 #pageTit {
-    margin: 80px 0px;
+    margin: 56px 0px 30px 0px;
     font-size: 24px;
 }
 
@@ -24,19 +24,22 @@
 }
 
 #petSitterInfoWrap {
-    width: 684px;
+    width: 720px;
 }
 
 #sitterInfo {
     display: flex;
     justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #d7dce5;
+    border-radius: 4px;
 }
 
 #sitterInfoInner {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 544px;
+    width: 550px;
 }
 
 #sitterNameLikeWrap {
@@ -62,41 +65,44 @@
 }
 
 #sitterIntroTextWrap {
-    margin-top: 80px;
+    margin-top: 56px;
 }
 
 #subPageTit {
-    margin-right: 20px;
-    margin-bottom: 40px;
-    font-size: 16px;
-    font-weight: bold;
+      margin-bottom: 30px;
+    font-size: 18px;
 }
 
 #sitterIntroText {
     padding: 20px;
-    width: 644px;
-    background-color: #F1F1F1;
+    width: 680px;
+    background-color: #f7f7f9;
     font-size: 14px;
+    border-radius: 4px;
 }
 
 #serviceWrap,
 #ablePetWrap,
 #reviewWriteWrap {
-    margin-top: 80px;
+    margin-top: 56px;
 }
 #ablePetInner {
     display: flex;
 }
 
 #ablePet {
-    margin-right: 40px;
+    margin-right: 8px;
+    padding: 4px 8px;
+    border: 1px solid #009C8F;
+    color: #009C8F;
+    border-radius: 4px;
     font-size: 14px;
 }
 #reviewText {
-    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
-    height: 60px;
     resize: none;
+    font-size: 14px;
 }
 
 #reviewBtnWrap {
@@ -123,18 +129,19 @@
     margin-bottom: 20px;
 }
 
-#reviewerInfo {
-    width: 470px;
+.reviewer-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 #reviewDate {
-	margin-top: -34px;
-    font-size: 14px;
+    font-size: 12px;
     color: #C4C4C4;
 }
 
 #line {
-    margin: 40px 0px;
+    margin: 20px 0px;
     border: 1px dotted #EAEAEA;
 }
 
@@ -150,37 +157,27 @@
 #detailTit {
 	display: flex;
 }
-
-#tagWrap {
-	margin-right: 20px;
-}
-
-#sitterNewImg {
-	margin-top: 6px;
-}
       
        
 #tagWrap {
-     margin-top: 10px;
-     font-size: 12px;
-     color: #E3C1A2;
+  margin-right: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: #f7f7f9;
 }
        
 #locationWrap {
-	margin: 0px 0px 10px 0px;
+	margin-top: 6px;
     display: flex;
     color: #C4C4C4;
-}
-      
-#detailTit {
-    margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 #reviewImg {
-    width: 140px;
-    height: 140px;
+        width: 140px;
+    height: 100px;
     object-fit: cover;
+    border-radius: 4px;
 }
 
 #reviewImgScopeWrap {
@@ -190,9 +187,7 @@
          
 #reviewTit {
 	margin-right: 20px;
-  	font-size: 16px;
- 	font-weight: bold;
-  	color: #535353;
+    font-size: 18px;
 }
    
 #reviewTitWrap {
@@ -202,15 +197,13 @@
 }
 
 #reviewScopeWrap {
-    display: flex;
+       display: flex;
     align-items: center;
-    justify-content: flex-end;
-    margin-top: 130px;
 }
 
 #scopeWrap {
     display: flex;
-    margin-top: 6px;
+    margin-top: 4px;
     color: #C4C4C4;
 }
 
@@ -225,8 +218,7 @@
  
 #periodInner {
 	padding: 20px;
-	box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-	background: #F8F9FA;
+	background: #f7f7f9;
 	border-radius: 5px;
 }
 
@@ -241,13 +233,13 @@
 }
 
 #reservationBtn {
-    margin-top: 40px;
+    margin-top: 20px;
     width: 404px;
     height: 40px;
     color: white;
-    background-color: #89A0F2;
+    background-color: #009C8F;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -291,8 +283,7 @@ input:-ms-input-placeholder {
     align-items: center;
     width: 404px;
     height: 70px;
-    border-radius: 5px;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    border-radius: 4px;
     background: white;
 }
 
@@ -312,7 +303,7 @@ input:-ms-input-placeholder {
 #carePriceKind {
     margin-top: 20px;
     font-size: 14px;
-    color: #7AAFFF;
+    color: #009C8F;
 }
 
 #carePrice {
@@ -340,7 +331,8 @@ input:-ms-input-placeholder {
 }
 
 #reviewerImg {
-	margin-right: 10px;
+	width: 40px;
+    height: 40px;
 }
 
 #calIntro {
@@ -349,14 +341,26 @@ input:-ms-input-placeholder {
     color: #E3C1A2;
 }
 
+.reviewer-namescope-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 #reviewerName {
-	margin-top: -10px;
+	font-size: 12px;
+	color: #C4C4C4;
 }
 
 #service {
-    display: flex;
-    width: 206px;
-    border-radius: 5px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 232px;
+    border-radius: 4px;
+    border: 1px solid #d7dce5;
+    padding: 10px 0px;
+    font-size: 14px;
 }
 
 #serviceTitContentWrap {
@@ -383,22 +387,16 @@ input:-ms-input-placeholder {
 #serviceInner {
 	display: inline-flex;
     flex-wrap: wrap;
-    width: 684px;
+    width: 720px;
     border-radius: 5px;
-    gap: 30px;
-}
-  
-#ablePet {
-	margin-right: 20px;
-	padding: 4px 8px;
-	border: 1px solid #89A0F2;
-	color: #89A0F2;
-	border-radius :50px;
+    gap: 10px;
 }
       
 #sitterNewImg {
 	width: 100px;
-	height: 90px;
+    height: 100px;
+    background-color: #f7f7f9;
+    border-radius: 4px;
 }
       
 #logo {

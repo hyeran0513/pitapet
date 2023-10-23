@@ -121,6 +121,7 @@
             <div id="sitterInfo">
                 <img src="${sitterInfo.sitter.profileImage}" id="sitterNewImg"/>
                 <div id="sitterInfoInner">
+                  <div>
                     <div id="sitterNameLikeWrap">
                         <div id="sitterName">${sitterInfo.sitter.id} 반려동물 돌보미</div>
                         <div id="likeCount">
@@ -131,7 +132,8 @@
                         <img src="/images/location.svg" />
                         ${sitterInfo.sitter.address}
                     </div>
-                    
+                  </div>
+                  
                     <c:set var="tags" value="${fn:split(sitterInfo.tag,',')}" />
                     <div id="detailTit">
 	                	<c:forEach var="tag" items="${tags}">
@@ -152,12 +154,12 @@
                     <c:forEach var="service" items="${sitterInfo.services}" varStatus="status">
 	                    <div id="service"> 
 	               			<c:choose>
-	               				<c:when test="${service.title eq '산책하기'}"><img src="/images/wark.png" id="serviceImg" /></c:when>
-	               				<c:when test="${service.title eq '목욕하기'}"><img src="/images/bath.png" id="serviceImg" /></c:when>
-	               				<c:when test="${service.title eq '배식하기'}"><img src="/images/feed.png" id="serviceImg" /></c:when>
-	               				<c:when test="${service.title eq '픽업가능'}"><img src="/images/pickup.png" id="serviceImg" /></c:when>
-	               				<c:when test="${service.title eq '실내놀이'}"><img src="/images/play.png" id="serviceImg" /></c:when>
-	               				<c:when test="${service.title eq '미용관리'}"><img src="/images/beauty.png" id="serviceImg" /></c:when>
+	               				<c:when test="${service.title eq '산책하기'}"></c:when>
+	               				<c:when test="${service.title eq '목욕하기'}"></c:when>
+	               				<c:when test="${service.title eq '배식하기'}"></c:when>
+	               				<c:when test="${service.title eq '픽업가능'}"></c:when>
+	               				<c:when test="${service.title eq '실내놀이'}"></c:when>
+	               				<c:when test="${service.title eq '미용관리'}"></c:when>
 	               			</c:choose>
 	               				<div id="serviceTitContentWrap">
 			                    	<div id="serviceTit">${service.title}</div>
@@ -216,17 +218,24 @@
                 <c:forEach var="review" items="${reviews}">
                     <div id="reviewerWrap">
                         <div id="reviewerInner">
+                          <div class="reviewer-wrap">
                             <img src="/images/reviewerImg.svg" id="reviewerImg"/>
                             
                             <div id="reviewerInfo">
+                              <div id="reviewScopeWrap">
+                                <img src="/images/star.svg" />
+                                <div id="scope">${review.rate}</div>
+                              </div>
+                              <div class="reviewer-namescope-wrap">
                                 <div id="reviewerName">${review.careInfo.companion.id} 보호자님</div>
-                                <div id="scopeWrap">
-                                    <img src="/images/location.svg" />
-                                    <div id="scope">${sitterInfo.sitter.address}</div>
-                                </div>
+                                <div id="reviewDate">${review.writeDate}</div>
+                              </div>
                             </div>
-                        
-                            <div id="reviewDate">${review.writeDate}</div>
+                          </div>
+                            <div id="scopeWrap">
+                              <img src="/images/location.svg" />
+                              <div id="scope">${sitterInfo.sitter.address}</div>
+                            </div>
                         </div>
                         <div id="reviewText">${review.content}</div>
                         <div id="reviewImgScopeWrap">
@@ -236,10 +245,6 @@
                             <c:if test="${not empty review.images}">
                                 <img src="${pageContext.request.contextPath}${review.images[0]}" id="reviewImg"/>
                             </c:if>
-                            <div id="reviewScopeWrap">
-                                <img src="/images/star.svg" />
-                                <div id="scope">${review.rate}</div>
-                            </div>
                         </div>
                         <div id="line"></div>   
                     </div>

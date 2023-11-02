@@ -20,7 +20,9 @@
         	<div id="logoWrap">
             	<c:url value="/manager/listSitterApply" var="managerMainUrl"/>
             	<img src="/images/adminRank.svg" />
-        		<div id="logo" onClick="location.href='${managerMainUrl}'">PIT A PET</div>
+        		<div id="logo" onClick="location.href='${managerMainUrl}'">
+        		  <img src="/images/logo.svg" />
+        		</div>
         	</div>
         
          	<div id="gnb">

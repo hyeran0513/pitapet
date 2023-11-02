@@ -5,31 +5,32 @@
 }
 
 #pageWrap {
-    margin: 100px auto 0px auto;
+    margin: 56px auto 0px auto;
     width: 1194px;
 }
 
 #pageTit {
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     font-size: 24px;
 }
 
 table {
     width: 100%;
-    border: 1px solid #EAEAEA;
+    border: 1px solid #d7dce5;
     border-collapse: collapse;
     border-radius: 5px;
 }
 
 th {
     height: 40px;
-    background-color: #F3F3F3;
+    background-color: #f7f7f9;
+    font-weight: normal;
 }
 
 td {
     height: 40px;
     text-align: center;
-    border-bottom: 1px solid #EAEAEA;
+    border-bottom: 1px solid #d7dce5
 }
 
 #applyDetailBtn {

@@ -26,7 +26,7 @@
         <div id="pageTit">
         <div>반려동물 정보</div>
         <c:url value='/pet/addPet' var="addPetUrl"/>
-                  <button id="petInfoAddBtn" onclick="location.href='${addPetUrl}'">추가하기+</button>
+                  <button id="petInfoAddBtn" onclick="location.href='${addPetUrl}'">추가하기</button>
         </div>
         
         <table>

@@ -21,7 +21,9 @@
    <c:choose>
    <c:when test="${registerFailed}">
    <div id="joinWrap">
-        <div id="joinTit">PIT A PET</div>
+        <div id="joinTit">
+          <img src="/images/logo.svg" />
+        </div>
         <div id="idPwdWrap">
             <input type="text" placeholder="아이디" id="joinId" name="id" value="${registerInfo.id}"/>
             <input type="password" placeholder="비밀번호" id="joinPwd" name ="password"/>
@@ -32,10 +34,11 @@
             <input type="text" placeholder="이름" id="joinName" name="name" value="${registerInfo.name}"/>
             <div id="genderWrap">
                 <div id="genderInner">
-                   <select name = "gender">
-                      <option id="joinMan" class="gender" value="M">남성</option>
-                         <option id="joinWoman" class="gender" value="F">여성</option>
-                   </select>
+                  <input type="radio" id="joinMan" class="gender" name="gender" value="M">
+									<label for="joinMan">남성</label>
+									
+									<input type="radio" id="joinWoman" class="gender" name="gender" value="F">
+									<label for="joinWoman">여성</label>
                 </div>
             </div>
             <input type="text" placeholder="생년월일" id="joinBirth" name="birth" value="${registerInfo.birth}" />

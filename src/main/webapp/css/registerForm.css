@@ -18,10 +18,14 @@
 }
 
 #joinTit {
-    margin-bottom: 40px;
-    font-size: 36px;
+    margin-bottom: 20px;
+    width: 140px;
     font-family: 'Righteous', cursive;
-    color: #89A0F2;
+}
+
+#loginTit img {
+  width: 100%;
+  object-fit: cover;
 }
 
 #idPwdWrap,
@@ -55,7 +59,7 @@
 #joinAddress:focus,
 #joinPhoneNumber:focus,
 #joinEmail:focus {
-    outline-color: #89A0F2;
+    outline-color: #009C8F;
 }
 
 #genderWrap {
@@ -88,7 +92,7 @@
 #joinMan:hover,
 #joinWoman:hover,
 .clicked {
-    background-color: #89A0F2;
+    background-color: #009C8F;
     color: white;
 }
 
@@ -97,7 +101,7 @@
     width: 440px;
     height: 50px;
     color: white;
-    background-color: #89A0F2;
+    background-color: #009C8F;
     border: none;
     cursor: pointer;
 }

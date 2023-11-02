@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
 #pageWrap {
-    margin: 100px auto 0px auto;
+    margin: 56px auto 0px auto;
     width: 1194px;
 }
 
 #pageTit {
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     font-size: 24px;
 }
 	

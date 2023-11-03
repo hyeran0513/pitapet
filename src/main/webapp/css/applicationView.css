@@ -1,138 +1,135 @@
- #headerWrap {
-    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+ #logo {
+  z-index: 1;
+  margin-left: 14px;
+}
+
+#headerWrap {
+  border-bottom: 1px solid rgba(150, 150, 150, 0.2);
 }   
 
 #pageWrap {
-    margin: 56px auto 0px auto;
-    width: 1194px;
+  margin: 56px auto 0px auto;
+  width: 1194px;
 }
 
 #pageTit {
-    margin-bottom: 30px;
-    font-size: 24px;
-}
-
-#pageInner {
-    display: flex;
-    justify-content: space-between;
-    width: 1194px;
-}
-
-#introPage {
-    width: 684px;
-}
-
-#infooPage {
-    width: 444px;
-}
-
-#locationWrap {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    font-size: 12px;
-    color: #C4C4C4;
-}
-
-#locationImg {
-    margin-right: 4px;
-}
-
-#sitterName {
-    font-size: 18px;
-}
-
-#subTit {
-    margin: 40px 0px 20px 0px;
-    font-size: 16px;
-}
-
-#service {
-    font-size: 14px;
-    color: #535353;
-}
-
-#ablePetWrap {
-    display: flex;
-    align-items: center;
-    height: 40px;
-}
-
-#ablePet {
-    margin-right: 14px;
-    padding: 2px 8px;
-    font-size: 14px;
-    color: #E3C1A2;
-    border: 1px solid #E3C1A2;
-    border-radius: 50px;
-}
-
-#certName {
-    font-size: 14px;
-    color: #535353;
+  margin-bottom: 30px;
+  font-size: 24px;
 }
 
 #btnWrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 444px;
-    height: 40px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #acceptBtn {
-    width: 200px;
-    height: 40px;
-    color: white;
-    background: #89A0F2;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+  margin-left: 8px;
+  width: 100px;
+  height: 34px;
+  color: white;
+  background: #009C8F;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
 
 #refuseBtn {
-    width: 200px;
-    height: 40px;
-    color: white;
-    background: #F28989;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+  width: 100px;
+  height: 34px;
+  background: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
 
-#introTit {
-    margin: 40px 0px 10px 0px;
+.applicant-info {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    width: calc(100% - 40px);
+    border: 1px solid #d7dce5;
+    border-radius: 4px;
+}
+
+.applicant-image {
+    width: 200px;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.address-label {
+    position: absolute;
+    top: 17.8%;
+    left: 4.6%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 70px;
+    height: 24px;
+    background-color: #E5EDEF;
+    color: #009C8F;
+    border-radius: 4px 0px 4px 0px;
+    font-size: 12px;
+}
+
+.applicant-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.applicant-details-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.applicant-id {
     font-size: 18px;
 }
 
-#introText {
-    color: #535353;
+.apply-date {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.introduction-text {
     font-size: 14px;
 }
 
-#certName {
-    margin: 20px 0px 80px 0px;
+.applicant-tags {
+    display: flex;
+    margin-top: auto;
 }
 
-#applyImg {
-    width: 684px;
-    height: 476.06px;
-    object-fit: scale-down;
-    border: 1px solid #EAEAEA;
-    border-radius: 5px;
+.tag {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 8px;
+    padding: 6px 8px;
+    background-color: #f7f7f9;
+    font-size: 12px;
 }
 
-#certImg {
-    width: 444px;
-    height: 309.02px;
-    object-fit: cover;
-}
-      
-#headerWrap {
-    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+.applicant-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
-#logo {
-    z-index: 1;
-   	margin-left: 14px;
+.qualification-image-label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #009C8F;
+}
+
+.qualification-image {
+    width: 100px;
+    border-radius: 10px;
 }

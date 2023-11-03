@@ -33,13 +33,13 @@
         <div id="privacyWrap">
             <input type="text" placeholder="이름" id="joinName" name="name" value="${registerInfo.name}"/>
             <div id="genderWrap">
-                <div id="genderInner">
-                  <input type="radio" id="joinMan" class="gender" name="gender" value="M">
-									<label for="joinMan">남성</label>
-									
-									<input type="radio" id="joinWoman" class="gender" name="gender" value="F">
-									<label for="joinWoman">여성</label>
-                </div>
+              <div id="genderInner">
+                <input type="radio" id="joinMan" class="gender" name="gender" value="M" checked>
+								<label for="joinMan">남성</label>
+								
+								<input type="radio" id="joinWoman" class="gender" name="gender" value="F">
+								<label for="joinWoman">여성</label>
+              </div>
             </div>
             <input type="text" placeholder="생년월일" id="joinBirth" name="birth" value="${registerInfo.birth}" />
             <input type="text" placeholder="전화번호 (숫자만 입력)" id="joinPhoneNumber" name="phone" value="${registerInfo.phone}"/>

@@ -20,7 +20,7 @@ table {
 }
 
 #sitterInfoWrap {
-	margin-bottom: 80px;
+	margin-bottom: 30px;
 }
 
 #tableTit {
@@ -28,10 +28,12 @@ table {
 	height: 40px;
 }
 
-tr, td {
+tr, th, td {
 	border: 1px solid #EAEAEA;
 	text-align: center;
 	height: 40px;
+	font-size: 14px;
+	font-weight: normal;
 }
 
 #logo {

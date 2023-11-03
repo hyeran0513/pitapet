@@ -69,7 +69,7 @@
 	                <img src="/images/fileImg.svg" id="fileImg"/>
 	                <input type="file" id="fileBtn" name="picture"/>
 	            </div>
-	            <button type="button" id="detailReviewBtn" onClick="recordCare()">일지 추가</button>
+	            <button type="button" id="detailReviewBtn" onClick="recordCare()">완료</button>
 	        </div>
         </form>
     </div>

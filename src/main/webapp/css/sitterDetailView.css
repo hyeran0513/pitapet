@@ -105,14 +105,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #reviewBtn {
     width: 100px;
     height: 40px;
-    border-radius: 5px;
-    background-color: #89A0F2;
+    border-radius: 4px;
+    background-color: #009C8F;
     color: white;
     border: none;
     cursor: pointer;
@@ -399,6 +399,11 @@ input:-ms-input-placeholder {
 #subPageWrap {
 	display: flex;
 	align-items: center;
-	margin-bottom: 40px;
 	height: 40px;
+}
+
+select[name="reviewStar"] {
+  margin-left: 4px;
+  padding: 6px 8px;
+  border: 1px solid #d7dce5;
 }

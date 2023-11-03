@@ -183,15 +183,17 @@
             	<c:if test="${not empty careListOfReview}">
             		<form method="POST" action="<c:url value='/review/addReview'/>" enctype="multipart/form-data">
 		                <div id="subPageWrap">
-			                <div id="subPageTit">리뷰 작성</div>
-			                <select name='reviewStar'>
-							  <option selected>5.0</option>
-							  <option>4.0</option>
-							  <option>3.0</option>
-							  <option>2.0</option>
-							  <option>1.0</option>
-							</select>
-						</div>
+			                <div id="subPageTit">
+			                 <span>리뷰 작성</span>
+				                <select name='reviewStar'>
+												  <option selected>5.0</option>
+												  <option>4.0</option>
+												  <option>3.0</option>
+												  <option>2.0</option>
+												  <option>1.0</option>
+												</select>
+											</div>
+										</div>
 		                <input type="hidden" name="careId" value="${careListOfReview.get(0).id}" />
 		                <input type="hidden" name="sitterId" value="${sitterInfo.sitter.id}" />
 		                <textarea placeholder="(내용)" id="reviewContent" name="content"></textarea>

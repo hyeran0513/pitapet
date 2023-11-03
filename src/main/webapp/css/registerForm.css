@@ -23,7 +23,7 @@
     font-family: 'Righteous', cursive;
 }
 
-#loginTit img {
+#joinTit img {
   width: 100%;
   object-fit: cover;
 }
@@ -66,28 +66,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 440px;
     height: 50px;
     background-color: white;
 }
 
 #genderInner {
     display: flex;
+    gap: 10px;
     width: 400px;
     background-color: white;
 }
 
 .gender {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 30px;
-    background-color: white;
-    border: 1px solid #E0E0E0;
-    color: #999999;
-    cursor: pointer;
+  display: none;
 }
+
+.gender + label {
+  padding: 10px 80px;
+  border: 1px solid #DCDCDC;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.gender:checked + label {
+  background-color: #009C8F;
+  color: #fff;
+  border-color: #009C8F;
+  font-size: 14px;
+}
+
 
 #joinMan:hover,
 #joinWoman:hover,
